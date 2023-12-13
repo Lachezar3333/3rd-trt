@@ -8,7 +8,7 @@
         body, html {
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Prevent horizontal scrollbar */
+            overflow-x: hidden; /* Prevent horizontal scrollbar */
         }
 
         body {
@@ -23,13 +23,12 @@
 
         section {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            flex-direction: column; /* Display children in a column */
         }
 
         .image-container {
-            width: 100vw; /* 100% of the viewport width */
-            height: 100vh; /* 100% of the viewport height */
+            width: 100vw; /* Take the full width of the viewport */
+            height: 100vh; /* Take the full height of the viewport */
             overflow: hidden;
             margin: 0;
         }
@@ -37,7 +36,7 @@
         .image-container img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Maintain aspect ratio and cover the container */
+            object-fit: contain; /* Maintain aspect ratio and fit the entire image within the container */
             border: 1px solid #ddd;
             border-radius: 0px;
             margin: 0;
@@ -49,7 +48,14 @@
     <section>
         <!-- Image 1 -->
         <div class="image-container">
-            <img src="manyimage.png" alt="Image 1">
+            <img src="nanaditzel.png" alt="Image 1">
+        </div>
+    </section>
+
+    <section>
+        <!-- Image 2 -->
+        <div class="image-container">
+            <img src="manyimage.png" alt="Image 2">
         </div>
     </section>
 
