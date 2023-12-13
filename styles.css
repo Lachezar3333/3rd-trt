@@ -21,7 +21,7 @@ html{
 
 header {
     color: #FFFFFF;
-    padding: 20px;
+    padding: 0px;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -36,6 +36,7 @@ header {
 .logo-container {
     text-align: left;
     margin-top: 10px;
+    padding: 0;
 }
 
 
