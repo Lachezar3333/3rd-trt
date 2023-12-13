@@ -164,12 +164,6 @@
                     <img src="path/to/image3.jpg" alt="Image 3">
                     <p>Caption for Image 3</p>
                 </div>
-        
-                <div class="about-us-image">
-                    <img src="path/to/image4.jpg" alt="Image 4">
-                    <p>Caption for Image 4</p>
-                </div>
-            </div>
         </section>
 
         <section id="about-us1" class="section square-section">
@@ -189,11 +183,6 @@
                 <div class="about-us-image">
                     <img src="path/to/image3.jpg" alt="Image 3">
                     <p>Caption for Image 3</p>
-                </div>
-        
-                <div class="about-us-image">
-                    <img src="path/to/image4.jpg" alt="Image 4">
-                    <p>Caption for Image 4</p>
                 </div>
             </div>
         </section>
@@ -310,7 +299,7 @@
         hideAllDetails();
         singleAdmissionDetails.style.display = 'block';
         resetButtonStyles();
-        singleAdmissionBtn.classList.add('active');
+        singleAdmissionBtn.classList.add('active', 'clicked');
         updateTextColors(singleAdmissionDetails);
     });
 
@@ -318,7 +307,7 @@
         hideAllDetails();
         familyPackageDetails.style.display = 'block';
         resetButtonStyles();
-        familyPackageBtn.classList.add('active');
+        familyPackageBtn.classList.add('active', 'clicked');
         updateTextColors(familyPackageDetails);
     });
 
@@ -326,7 +315,7 @@
         hideAllDetails();
         groupToursDetails.style.display = 'block';
         resetButtonStyles();
-        groupToursBtn.classList.add('active');
+        groupToursBtn.classList.add('active', 'clicked');
         updateTextColors(groupToursDetails);
     });
 
@@ -337,9 +326,9 @@
     }
 
     function resetButtonStyles() {
-        singleAdmissionBtn.classList.remove('active');
-        familyPackageBtn.classList.remove('active');
-        groupToursBtn.classList.remove('active');
+        singleAdmissionBtn.classList.remove('active', 'clicked');
+        familyPackageBtn.classList.remove('active', 'clicked');
+        groupToursBtn.classList.remove('active', 'clicked');
     }
 
     function updateTextColors(detailsContainer) {
@@ -348,9 +337,8 @@
             paragraph.classList.add('active');
         });
     }
-    
 });
- 
+
     </script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -380,9 +368,6 @@
         });
     });
 </script>
-
-
-    
 
     </body>
     </html>

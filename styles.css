@@ -283,7 +283,7 @@ footer {
     color: black;
 }
 #cafe {
-    color: #333;
+    color: black;
     text-align: center;
 }
 
@@ -302,8 +302,8 @@ footer {
 
 .cafe {
     flex: 1;
-    border: 5px solid #a60321;
-    border-radius: 10px;
+    border: 1px solid black;
+    border-radius: 0px;
     overflow: hidden;
     margin: 0 0px; /* Add margin to create space between boxes */
     height: 250px;
@@ -339,7 +339,7 @@ footer {
 .button2:hover,
 .button3:hover,
 .button4:hover {
-    color: #a60321;
+    color: red;
     transition: 0.4s;
 }
 
@@ -351,7 +351,7 @@ footer {
 footer {
     background-color: #fff;
     color: #000;
-    padding: 20px 0;
+    padding: 0 0;
 }
 
 .footer-columns {
@@ -430,43 +430,91 @@ footer {
 }
 
 .visit-option-btn {
-    background-color: orange;
-    color: black;
     padding: 10px;
     margin-bottom: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 0;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#singleAdmissionBtn {
+    background-color: red;
+    color: black;
+}
+
+#familyPackageBtn {
+    background-color: orange;
+    color: black;
+}
+
+#groupToursBtn {
+    background-color: pink;
+    color: black;
+}
+
+.visit-option-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.visit-option-btn.active,
+.visit-option-btn:active {
+    background-color: white;
+    color: black;
+}
+
+
+#singleAdmissionBtn:hover {
+    background-color: white;
+    color: black;
+}
+
+#familyPackageBtn:hover {
+    background-color: white;
+    color: black;
+}
+
+#groupToursBtn:hover {
+    background-color: white;
+    color: black;
 }
 
 .visit-option-details {
     display: none;
     padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 0;
     margin-bottom: 10px;
     height: 32vh;
 }
 
 .visit-option-btn.active {
-    background-color: white; /* Change the background color on button click */
-    color:black; /* Change the text color on button click */
+    background-color: white;
+    color: black;
 }
 
 .visit-option-title {
-    color: black; /* Default text color */
+    color: black;
 }
 
 .visit-option-title.active {
-    color: black; /* Change this to your desired color */
+    color: red;
 }
+
 .active {
-    color: black; /* Change this to your desired color */
+    color: black;
 }
+
 #singleAdmissionBtn:focus + #singleAdmissionDetails,
 #familyPackageBtn:focus + #familyPackageDetails,
 #groupToursBtn:focus + #groupToursDetails {
     display: block;
+}
+
+.visit-option-btn.clicked {
+    background-color: white;
+    color: black;
 }
 
 .button-link {
@@ -528,8 +576,8 @@ h3{
 .about-us-image {
     width: 100%; /* Set your desired width */
     margin-bottom: 20px;
-    border: 2px solid #333; /* Set your desired border color */
-    border-radius: 10px;
+    border: 1px solid black; /* Set your desired border color */
+    border-radius: 0px;
     overflow: hidden;
 }
 
