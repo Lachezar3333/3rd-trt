@@ -109,116 +109,24 @@ nav a:hover {
 }
 
 #exhibitions{
-    color: #333;
+    color: black;
 }
 
-.current{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    text-align: center;
-    font-size: 25px;
-}
-
-
-.block1{
-    display: flex;
-    height: 250px;
-    
-}
-.exhibition1 {
-    border: none;
-    width: 60%;
-    padding-left: 25px;
-    background-size: cover; /* Change this property to 'cover' */
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-image: url("kris%20and%20brain.png");
-}
-
-.exhibition1 h1{
-    font-size: 20px;
-
-}
-
-.exhibition1 p{
-    font-size: 15px;
-}
-
-.exhibition2 {
-    border: none;
-    width: 40%;
-    font-size: 16px;
-    padding-left: 25px;
-    background-size: cover; /* Change this property to 'cover' */
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-image: url("hartchair.png");
-}
-
-.exhibition2 h2{
-    font-size: 20px;
-
-}
-
-.exhibition2 p{
-    font-size: 15px;
-}
-
-
-.block2{
-    display: flex;
-    height: 250px;
-}
-.exhibition3 {
-    border: none;
-    width: 40%;
-    padding-left: 25px;
-    background-size: cover; /* Change this property to 'cover' */
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-image: url("painted.png");
-}
-
-.exhibition3 h3{
-    font-size: 20px;
-}
-
-
-
-.exhibition4 {
-    border: none;
-    width: 60%;
-    padding-left: 25px;
-    background-size: cover; /* Change this property to 'cover' */
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-image: url("chairs2.png");
-}
-
-.exhibition4 h4{
-    font-size: 20px;
-}
-
-.block3{
-    display: flex;
-    height: 250px;
-    
-}
-
-
-.exhibition1 img,
-.exhibition2 img,
-.exhibition3 img,
-.exhibition4 img {
+.exhibition1 img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
 
-
 #events {
     text-align: center;
-    margin-top: 50px;
+    margin-top: -50px;
+    color: black; /* Set the text color to black */
+}
+
+.text-above-slider,
+.text-below-slider {
+    margin-top: 20px; /* Adjust the margin as needed */
 }
 
 .swiper-container {
@@ -236,7 +144,7 @@ nav a:hover {
 }
 
 .swiper-slide img {
-    height: 70%; /* Set a specific height for the image */
+    height: 85%; /* Set a specific height for the image */
     width: auto; /* Auto width to maintain aspect ratio */
     object-fit: cover; /* Ensure the entire image is visible */
     border-radius: 10px;
@@ -244,6 +152,7 @@ nav a:hover {
 
 .swiper-slide .event-description {
     padding: 20px;
+    color: black; /* Set the text color to black */
 }
 
 .swiper-pagination {
@@ -252,12 +161,13 @@ nav a:hover {
 
 .swiper-button-next,
 .swiper-button-prev {
-    color: #fff;
+    color: black;
 }
 
 .swiper-pagination-bullet {
-    background: #007bff;
+    background: black;
 }
+
 
 
 /* Contact Section */
@@ -300,22 +210,31 @@ footer {
     margin: 0 -10px; /* Add negative margin to remove space between boxes */
 }
 
+.cafe img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.cafe-large img {
+    object-fit: scale-down; /* Use 'scale-down' for the second and third images */
+}
+
+.cafe-small img {
+    object-fit: cover; /* Use 'cover' for the first and fourth images */
+}
+
+/* Adjust the height of .cafe to match your desired height */
 .cafe {
     flex: 1;
     border: 1px solid black;
     border-radius: 0px;
     overflow: hidden;
     margin: 0 0px; /* Add margin to create space between boxes */
-    height: 250px;
+    height: 250px; /* Adjust the height as needed */
     transition: transform 0.3s ease-in-out;
 }
 
-.cafe img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
 
 .cafe h3 {
     font-size: 20px;
@@ -562,33 +481,134 @@ h3{
     padding: 20px;
     background-color: #f5f5f5; /* Set your desired background color */
 }
+#about-us {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.about-us-content-container {
+    flex-basis: calc(100% - 10px);
+}
+
+.about-us-content {
+    background-color: #f4f4f4;
+    padding: 0px;
+    border-radius: 0px;
+}
 
 .about-us-images {
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    flex-direction: column;
+    margin-top: 0px;
 }
 
 .about-us-column {
-    flex-basis: calc(50% - 10px); /* Adjust the width of each column with some spacing */
+    width: 100%;
 }
 
 .about-us-image {
-    width: 100%; /* Set your desired width */
-    margin-bottom: 20px;
-    border: 1px solid black; /* Set your desired border color */
+    width: 100%;
+    height: 200px;
+    margin-bottom: 0px;
+    border: 1px solid black;
     border-radius: 0px;
     overflow: hidden;
 }
 
 .about-us-image img {
     width: 100%;
-    height: auto;
-    border-bottom: 2px solid #333; /* Set your desired border color */
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 2px solid #333;
 }
 
 .about-us-image p {
-    margin: 10px 0;
-    font-size: 14px; /* Set your desired font size */
-    color: #666; /* Set your desired text color */
+    margin: 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+
+.about-us-image:nth-child(1) {
+}
+
+.about-us-image:nth-child(2) {
+    margin-left: -285px;
+    margin-right: auto;
+}
+
+.about-us-image:nth-child(3) {
+    /* Styles for the third image */
+    /* Add individual styles as needed */
+}
+
+.image-button {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.image-button img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#Mission {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.Mission {
+    display: flex;
+    flex-direction: column; /* Display items in a column */
+    margin-top: 0px;
+}
+
+.Mission-item {
+    width: 100%;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 0px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.Mission-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 2px solid #333;
+}
+
+.Mission-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Apply styles for the second image */
+.Mission-item:nth-child(2) {
+    margin-left: 285px; /* Adjust the margin-left value as needed */
+    margin-right: auto; /* Reset margin-right to align on the left */
+}
+
+.image-button {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.image-button img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
