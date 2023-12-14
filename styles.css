@@ -523,8 +523,10 @@ h3{
 
 #about-us p {
     text-align: justify;
-    width: 100%; /* Full width on smaller screens */
+    width: 300px; /* Full width on smaller screens */
     margin: 10px 0; /* Adjusted margin */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media only screen and (max-width: 768px) {
@@ -569,11 +571,14 @@ h3{
 #Mission p {
     text-align: justify;
     width: 300px;
+    margin: 10px auto;
+    margin-bottom: -400px;
 }
 
 #Mission h2{
     justify-content: right;
 }
+
 
 .Mission {
     display: flex;
