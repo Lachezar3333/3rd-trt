@@ -46,29 +46,39 @@ nav a {
     margin: 0 40px; /* Adjust the margin to create 20px space between items */
 }
 
+/* Existing styles... */
+
 /* Responsive styles */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1200px) {
     header {
-        flex-direction: column;
+        flex-direction: row;
         height: auto;
+        padding: 10px;
     }
 
     .logo-container img {
-        max-width: 60%;
+        max-width: 80%;
         height: auto;
+        margin-bottom: 10px;
     }
 
     nav {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
         align-items: center;
         margin-top: 0.2rem;
+        width: 100%;
+        white-space: nowrap;
+        overflow-x: auto;
     }
 
     nav a {
-        margin: 4px 0;
-        font-size: 0.8rem;
+        margin: 5px 10px;
+        font-size: 0.7rem; /* Adjusted font size for smaller screens */
     }
 }
+
+
 
 
 #home {
@@ -186,19 +196,6 @@ nav a {
 }
 
 
-
-.contact-box {
-    text-align: center;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    color: black;
-    /* Remove height: 100%; to allow the box to expand based on content */
-}
-
-#contact address {
-    color: black;
-}
 #cafe {
     color: black;
     text-align: center;
@@ -482,13 +479,14 @@ h3{
 }
 
 .about-us-content-container {
-    flex-basis: calc(100% - 10px);
+    flex-basis: 100%; /* Set to full width on smaller screens */
 }
 
 .about-us-content {
     background-color: #f4f4f4;
     padding: 0px;
     border-radius: 0px;
+    width: 100%; /* Set to full width on smaller screens */
 }
 
 .about-us-images {
@@ -504,7 +502,7 @@ h3{
 .about-us-image {
     width: 100%;
     height: 240px;
-    margin-bottom: 0px; /* Add spacing between images */
+    margin-bottom: 10px; /* Add spacing between images */
     border: 1px solid black;
     border-radius: 0px;
     overflow: hidden;
@@ -518,30 +516,33 @@ h3{
 }
 
 .about-us-image p {
-    margin: 0 0;
+    margin: 0; /* Reset margin */
     font-size: 14px;
     color: #666;
 }
 
 #about-us p {
-   text-align: justify;
-    width: 300px;
-    margin: 80px;
+    text-align: justify;
+    width: 100%; /* Full width on smaller screens */
+    margin: 10px 0; /* Adjusted margin */
 }
 
-
-/* Responsive styles */
 @media only screen and (max-width: 768px) {
-    .about-us-content p {
+    #about-us p {
         width: 100%; /* Full width on smaller screens */
         margin-left: 0; /* Reset margin-left */
     }
+
+    .about-us-image:nth-child(2) {
+        margin-left: 0; /* Reset margin for the second image on smaller screens */
+        margin-right: 0; /* Reset margin for the second image on smaller screens */
+    }
+
+    .about-us-content p {
+        margin: 10px 0; /* Adjusted margin for smaller screens */
+    }
 }
 
-.about-us-image:nth-child(2) {
-    margin-left: -419px;
-    margin-right: auto;
-}
 
 .image-button {
     display: inline-block;
@@ -556,14 +557,8 @@ h3{
     height: auto;
     display: block;
 }
+
          
-
-
-
-
-
-
-
 #Mission {
     color: black;
     display: flex;
@@ -624,14 +619,32 @@ h3{
     overflow: hidden;
 }
 
+/* Responsive styles for #Mission section */
+@media only screen and (max-width: 768px) {
+    #Mission p {
+        width: 100%; /* Full width on smaller screens */
+        margin-left: 0; /* Reset margin-left */
+        margin-bottom: 20px; /* Adjusted margin for better spacing */
+    }
+
+    .Mission-item {
+        width: 100%; /* Set the width to full on smaller screens */
+        margin-left: 0; /* Reset margin-left */
+        margin-right: 0; /* Reset margin-right */
+    }
+
+    .Mission-item:nth-child(2) {
+        margin-left: 0; /* Reset margin-left for the second item on smaller screens */
+        margin-right: 0; /* Reset margin-right for the second item on smaller screens */
+    }
+}
+
 /* Responsive styles */
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
     .Mission-item {
         width: 20%;
     }
-}
-/* Responsive styles */
-@media only screen and (min-width: 769px) and (max-width: 1200px) {
+
     .about-us-content p {
         width: 100%; /* Full width on medium screens */
         margin-left: 0; /* Reset margin-left */
