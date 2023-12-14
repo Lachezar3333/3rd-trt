@@ -523,10 +523,10 @@ h3{
 
 #about-us p {
     text-align: justify;
-    width: 300px; /* Full width on smaller screens */
-    margin: 10px 0; /* Adjusted margin */
-    margin-left: auto;
-    margin-right: auto;
+    width: 1000px; /* Full width on smaller screens */
+    margin: 10px 10px
+; /* Adjusted margin */
+   
 }
 
 @media only screen and (max-width: 768px) {
@@ -565,49 +565,46 @@ h3{
     color: black;
     display: flex;
     flex-direction: column;
-    margin-top: 15px; /* Add spacing between sections */
+    margin-top: 0px; /* Add spacing between sections */
 }
 
 #Mission p {
     text-align: justify;
-    width: 300px;
-    margin: 10px auto;
-    margin-bottom: -400px;
+    max-width: 300px; /* Change width to max-width for responsiveness */
+    margin-bottom: 20px; /* Adjust the margin to a positive value */
 }
 
-#Mission h2{
-    justify-content: right;
-}
-
-
-.Mission {
-    display: flex;
-    flex-direction: column; /* Display items in a column */
-    margin-top: 0;
-}
+#Mission h2 {
+    text-align: center; /* Use text-align instead of justify-content */
+}   
 
 .Mission-item {
-    width: 300px; /* Set the width to your desired value */
-    height: 250px; /* Set the height to your desired value */
+    width: 300px;
+    height: 250px;
     border: 1px solid black;
     border-radius: 0;
     overflow: hidden;
-    margin: 0; /* Reset margin */
+    margin: 0 0; /* Adjust margin for spacing between Mission items */
     display: flex;
-    align-items: flex-end; /* Align items to the bottom */
+    flex-direction: column; /* Arrange content in a column */
 }
 
 .Mission-item img {
     width: 100%;
     height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
 }
 
+
 .Mission-item p {
-    margin: 0;
+    margin: 10px;
+    max-width: 300px;
+    text-align: justify;
+    margin-bottom: 20px;
+    margin-left: auto; /* Shift text to the right */
     font-size: 14px;
     color: #666;
 }
-
 /* Apply styles for the second item in Mission section */
 
 
@@ -615,7 +612,7 @@ h3{
     display: inline-block;
     cursor: pointer;
     border: 1px solid #ccc;
-    border-radius: 0px;
+    border-radius: 0; /* Removed border-radius to maintain a rectangular shape */
     overflow: hidden;
 }
 
