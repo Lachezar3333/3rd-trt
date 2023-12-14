@@ -569,8 +569,6 @@ h3{
 #Mission p {
     text-align: justify;
     width: 300px;
-    margin-left: 1100px;
-    margin-bottom: -405px;
 }
 
 #Mission h2{
@@ -606,10 +604,7 @@ h3{
 }
 
 /* Apply styles for the second item in Mission section */
-.Mission-item:nth-child(2) {
-    margin-left: 495px;
-    margin-right: auto;
-}
+
 
 .image-button {
     display: inline-block;
@@ -641,21 +636,12 @@ h3{
 
 /* Responsive styles */
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
-    .Mission-item {
-        width: 20%;
-    }
-
     .about-us-content p {
         width: 100%; /* Full width on medium screens */
         margin-left: 0; /* Reset margin-left */
     }
 
-    .Mission-item {
-        width: 48%;
-    }
-
-    .about-us-image,
-    .Mission-item {
+    .about-us-image {
         margin-bottom: 0px; /* Adjust spacing between items for medium screens */
     }
 }
@@ -760,4 +746,127 @@ footer {
     height: auto;
     margin-bottom: 10px;
     margin-top: 20px; 
+}
+
+
+@media (max-width:500px) {
+    header {
+        padding: 0;
+        display: block;
+        overflow: auto;
+    }
+
+    header nav {
+        display: contents;
+    }
+
+    header nav a {
+        font-size: 10px;
+        margin: 5px 0;
+    }
+
+    #google_translate_element {
+        float:  right;
+    }
+
+    header img {
+        float: left;
+    }
+
+    #exhibitions {
+        margin: 0;
+    }
+
+    .current {
+        margin-top: 0;
+        padding-top: 20px;
+    }
+
+    #about-us p,
+    #Mission p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .about-us-images,
+    .flatpickr-calendar,
+    .footer-column {
+        margin: 0 auto;
+    }
+
+    .footer-columns {
+        display: initial;
+    }
+
+    .footer-column {
+        border-bottom: 1px solid gray;
+        padding-bottom: 20px;
+    }
+}
+
+
+@media(min-width: 501px)and (max-width:1000px) {
+    header {
+        display:block;
+    }
+    
+    header img {
+        float: left;
+        width: 50%;
+        max-width: 250px !important;
+    }
+
+    #google_translate_element {
+        float: right;
+        position: relative;
+        margin-top: -100px;
+    }
+
+    #exhibitions {
+        margin: 0;
+    }
+
+    .current {
+        margin-top: 0;
+        padding-top: 20px;
+    }
+
+    #about-us p,
+    #Mission p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .about-us-images,
+    .flatpickr-calendar  {
+        margin: 0 auto;
+    }
+
+    #Mission img {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .Mission-item {
+        border: 0;
+        margin: 0 auto;
+    }
+}
+
+@media(min-width: 1001px) and (max-width:1500px) {
+    #exhibitions {
+        margin: 0;
+    }
+
+    .current {
+        margin-top: 0;
+        padding-top: 20px;
+    }
+
+
+}
+
+@media (min-width: 1501px) {
+
+
 }
