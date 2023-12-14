@@ -1,68 +1,76 @@
 body, html {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #FFFFFF;
+    color: #000000;
     width: 100%;
     overflow-x: hidden;
-
 }
 
 * {
     box-sizing: border-box;
 }
 
-html{
-
+html {
     scroll-behavior: smooth;
 }
 
-
 header {
-    color: #FFFFFF;
-    padding: 0px;
-    text-align: center;
+    background-color: #f1f1f1;
+    padding: -20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 55px; 
-    position: sticky;
-    top: 0;
-    background-color: lightgray; 
-    z-index: 1000; 
-}
-
-.logo-container {
-    text-align: left;
-    margin-top: 10px;
-    padding: 0;
 }
 
 
 
+.logo-container img {
+    max-width: none; /* Remove max-width to allow the image to take its natural size */
+    width: auto;
+    height: 150px; /* Set the fixed height of the logo image */
+}
 
 nav {
     display: flex;
     justify-content: center;
-    margin-top: 5px;
+    justify-content: space-evenly; /* Space the buttons evenly */
+    align-items: center;
 }
 
 nav a {
-    color: black;
     text-decoration: none;
-    margin: 0 10px; /* Adjust the margin to your preference */
-    font-weight: bold;
-    font-size: 16px;
-    transition: color 0.3s ease-in-out;
-    padding-right: 50px;
+    color: black;
+    padding: 5px;
+    margin: 0 40px; /* Adjust the margin to create 20px space between items */
 }
 
-nav a:hover {
-    color: white;
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .logo-container img {
+        max-width: 60%;
+        height: auto;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0.2rem;
+    }
+
+    nav a {
+        margin: 4px 0;
+        font-size: 0.8rem;
+    }
 }
 
-/* Welcome Section */
+
 #home {
     position: relative;
     color: #fff;
@@ -71,16 +79,15 @@ nav a:hover {
 #home .video-container {
     position: relative;
     overflow: hidden;
-    max-height: 600px; /* Adjusted the maximum height */
+    max-height: 600px;
 }
 
 #home video {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: auto;
     object-fit: cover;
     display: block;
 }
-
 
 #home .overlay {
     position: absolute;
@@ -100,30 +107,37 @@ nav a:hover {
 }
 
 #home h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 4vw;
+    margin-bottom: 4%;
 }
 
 #home p {
-    font-size: 18px;
+    font-size: 2vw;
     color: #ddd;
 }
+
 
 #exhibitions{
     color: black;
 }
 
-.exhibition1 img {
+#exhibitions {
+    color: black;
     width: 100%;
-    height: auto;
-    object-fit: cover;
+}
+
+.block-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 #events {
     text-align: center;
     margin-top: -50px;
     color: black; /* Set the text color to black */
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .text-above-slider,
@@ -172,16 +186,6 @@ nav a:hover {
 }
 
 
-
-/* Contact Section */
-
-footer {
-    background-color: black; /* Set your desired background color for the footer */
-    color: white; /* Set your desired text color for the footer */
-    position: relative;
-    width: 100%;
-    margin-top: auto; /* Push the footer to the bottom of the content area */
-}
 
 .contact-box {
     text-align: center;
@@ -270,46 +274,6 @@ footer {
     margin-top: 50px;
 }
 
-footer {
-    background-color: #fff;
-    color: #000;
-    padding: 0 0;
-}
-
-.footer-columns {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-column {
-    width: 30%;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.footer-column h3 {
-    font-size: 1.2em;
-}
-
-.footer-column p {
-    color: #000;
-}
-
-.footer-column a {
-    background-color: #000;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
-}
-
 #book-visit {
     display: flex;
     flex-direction: column;
@@ -326,16 +290,24 @@ footer {
 
 .visit-options-container {
     display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
     align-items: center;
     justify-content: center; /* Center the child elements horizontally */
     width: 100%;
     max-width: 1200px;
     margin-top: 20px; /* Adjusted margin from the top */
 }
+.calendar-container {
+    width: 100%; /* Full width by default */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
 
 .calendar-container {
-    width: 50%; /* Adjusted width for the calendar container */
+    max-width: 1000px; /* Set a maximum width to avoid excessive stretching */
+    height: 300px;
+    /* Add any other styles as needed */
 }
+
 
 .flatpickr-calendar {
     width: 100%; /* Use 100% to fill the container width */
@@ -344,12 +316,15 @@ footer {
     /* Add any other styles as needed */
 }
 
+.options-block {
+    width: 100%; /* Full width by default */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
 
 .options-block {
-    width: 50%;
-    /* Adjusted layout to make room for the wider calendar */
-    /* You might need to further adjust these styles based on your layout */
+    margin-top: 20px; /* Add margin between the calendar and options block */
 }
+
 
 .visit-option-btn {
     padding: 10px;
@@ -410,6 +385,7 @@ footer {
     margin-bottom: 10px;
     height: 32vh;
 }
+
 
 .visit-option-btn.active {
     background-color: white;
@@ -481,14 +457,28 @@ h3{
 }
 
 .square-section {
-    padding: 20px;
+    padding: 0px;
     background-color: #f5f5f5; /* Set your desired background color */
 }
+@media only screen and (min-width: 768px) {
+    .calendar-container,
+    .options-block {
+        width: 50%; /* Adjusted width for larger screens */
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .options-block {
+        width: 48%; /* Adjusted layout for even larger screens */
+    }
+}
+/* Styles for the first section with id #about-us */
 #about-us {
     color: black;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .about-us-content-container {
@@ -513,8 +503,8 @@ h3{
 
 .about-us-image {
     width: 100%;
-    height: 200px;
-    margin-bottom: 0px;
+    height: 240px;
+    margin-bottom: 0px; /* Add spacing between images */
     border: 1px solid black;
     border-radius: 0px;
     overflow: hidden;
@@ -533,22 +523,24 @@ h3{
     color: #666;
 }
 
-.about-us-content p {
-    text-align: justify;
+#about-us p {
+   text-align: justify;
     width: 300px;
+    margin: 80px;
 }
 
-.about-us-image:nth-child(1) {
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .about-us-content p {
+        width: 100%; /* Full width on smaller screens */
+        margin-left: 0; /* Reset margin-left */
+    }
 }
 
 .about-us-image:nth-child(2) {
-    margin-left: -399px;
+    margin-left: -419px;
     margin-right: auto;
-}
-
-.about-us-image:nth-child(3) {
-    /* Styles for the third image */
-    /* Add individual styles as needed */
 }
 
 .image-button {
@@ -564,34 +556,52 @@ h3{
     height: auto;
     display: block;
 }
+         
+
+
+
+
+
+
 
 #Mission {
     color: black;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    margin-top: 15px; /* Add spacing between sections */
+}
+
+#Mission p {
+    text-align: justify;
+    width: 300px;
+    margin-left: 1100px;
+    margin-bottom: -405px;
+}
+
+#Mission h2{
+    justify-content: right;
 }
 
 .Mission {
     display: flex;
     flex-direction: column; /* Display items in a column */
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .Mission-item {
-    width: 350px;
-    height: 200px;
+    width: 300px; /* Set the width to your desired value */
+    height: 250px; /* Set the height to your desired value */
     border: 1px solid black;
-    border-radius: 0px;
+    border-radius: 0;
     overflow: hidden;
-    margin-bottom: 0px;
+    margin: 0; /* Reset margin */
+    display: flex;
+    align-items: flex-end; /* Align items to the bottom */
 }
 
 .Mission-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-bottom: 2px solid #333;
 }
 
 .Mission-item p {
@@ -600,22 +610,141 @@ h3{
     color: #666;
 }
 
-/* Apply styles for the second image */
+/* Apply styles for the second item in Mission section */
 .Mission-item:nth-child(2) {
-    margin-left: 350px; /* Adjust the margin-left value as needed */
-    margin-right: auto; /* Reset margin-right to align on the left */
+    margin-left: 495px;
+    margin-right: auto;
 }
 
 .image-button {
     display: inline-block;
     cursor: pointer;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 0px;
     overflow: hidden;
 }
 
-.image-button img {
+/* Responsive styles */
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    .Mission-item {
+        width: 20%;
+    }
+}
+/* Responsive styles */
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    .about-us-content p {
+        width: 100%; /* Full width on medium screens */
+        margin-left: 0; /* Reset margin-left */
+    }
+
+    .Mission-item {
+        width: 48%;
+    }
+
+    .about-us-image,
+    .Mission-item {
+        margin-bottom: 0px; /* Adjust spacing between items for medium screens */
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .about-us-content-container {
+        flex-basis: calc(33.33% - 10px); /* Set one-third width for even larger screens */
+    }
+
+    .about-us-column {
+        width: calc(33.33% - 10px);
+    }
+
+    .Mission-item {
+        width: calc(33.33% - 10px);
+    }
+}
+
+
+
+
+
+footer {
+    background-color: black; /* Set your desired background color for the footer */
+    color: white; /* Set your desired text color for the footer */
+    position: relative;
     width: 100%;
-    height: auto;
+    margin-top: auto; /* Push the footer to the bottom of the content area */
+}
+
+footer {
+    background-color: #fff;
+    color: #000;
+    padding: 0 0;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* Align items at the top */
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer-column h3 {
+    font-size: 1.2em;
+}
+
+.footer-column p {
+    color: #000;
+}
+
+.footer-column a {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-column {
+    margin-bottom: 20px;
+}
+
+.footer-button {
     display: block;
+    margin-bottom: 10px;
+}
+
+.footer-pictures {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-picture img {
+    max-width: 110px;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 20px; 
 }
