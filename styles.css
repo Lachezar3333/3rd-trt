@@ -127,14 +127,27 @@ nav a {
 }
 
 
-#exhibitions{
-    color: black;
-}
 
 #exhibitions {
     color: black;
     width: 100%;
+    padding-top: 5px;
 }
+
+.text1 {
+    padding-right: 350px;
+    font-size: x-large;
+    bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+}
+
+.text2 {
+    padding-left: 200px;
+    font-size: x-large;
+    margin-top: 5px;
+}
+
 
 .block-container {
     display: flex;
@@ -148,6 +161,18 @@ nav a {
     margin-top: -50px;
     color: black; /* Set the text color to black */
     padding-top: 40px;
+}
+
+.events {
+    font-size: x-large;
+    padding-top: 0;
+    margin-bottom: 0;
+}
+
+.events2 {
+    font-size: larger;
+    padding-top: 0;
+    margin-top: 0;
 }
 
 .text-above-slider,
@@ -268,7 +293,7 @@ nav a {
 
 #about-us {
     text-align: center;
-    margin-top: 50px;
+    margin-top: -42px;
 }
 
 #book-visit {
@@ -492,7 +517,7 @@ h3{
 .about-us-images {
     display: flex;
     flex-direction: column;
-    margin-top: 0px;
+    margin-top: 1px;
 }
 
 .about-us-column {
@@ -502,7 +527,7 @@ h3{
 .about-us-image {
     width: 100%;
     height: 240px;
-    margin-bottom: 10px; /* Add spacing between images */
+    
     border: 1px solid black;
     border-radius: 0px;
     overflow: hidden;
@@ -522,12 +547,15 @@ h3{
 }
 
 #about-us p {
+    padding-top: 70px;
     text-align: justify;
-    width: 1000px; /* Full width on smaller screens */
-    margin: 10px 10px
+    width: 900px; /* Full width on smaller screens */
+    margin: 10px 45px
 ; /* Adjusted margin */
    
 }
+
+
 
 @media only screen and (max-width: 768px) {
     #about-us p {
@@ -565,34 +593,48 @@ h3{
     color: black;
     display: flex;
     flex-direction: column;
-    margin-top: 0px; /* Add spacing between sections */
+    margin-top: -40px;
+    position: relative; 
 }
 
+
+
 #Mission p {
+    margin-top: 140px;
+    margin-left: 650px;
+    position: absolute;
     text-align: justify;
-    max-width: 300px; /* Change width to max-width for responsiveness */
+    max-width: 750px; /* Change width to max-width for responsiveness */
     margin-bottom: 20px; /* Adjust the margin to a positive value */
+    font-size: large;
+    padding: 0px -490px;
+    text-wrap: wrap;
 }
 
 #Mission h2 {
     text-align: center; /* Use text-align instead of justify-content */
+    position: static;
+    margin: 0;
 }   
 
 .Mission-item {
+    position: relative;
     width: 300px;
     height: 250px;
     border: 1px solid black;
     border-radius: 0;
     overflow: hidden;
-    margin: 0 0; /* Adjust margin for spacing between Mission items */
     display: flex;
     flex-direction: column; /* Arrange content in a column */
+    margin-top: 0px;
+    
 }
 
 .Mission-item img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Maintain aspect ratio and cover the container */
+
 }
 
 
@@ -600,7 +642,7 @@ h3{
     margin: 10px;
     max-width: 300px;
     text-align: justify;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     margin-left: auto; /* Shift text to the right */
     font-size: 14px;
     color: #666;
@@ -619,9 +661,7 @@ h3{
 /* Responsive styles for #Mission section */
 @media only screen and (max-width: 768px) {
     #Mission p {
-        width: 100%; /* Full width on smaller screens */
-        margin-left: 0; /* Reset margin-left */
-        margin-bottom: 20px; /* Adjusted margin for better spacing */
+        display: none;
     }
 
     .Mission-item {
@@ -733,6 +773,10 @@ footer {
     margin-bottom: 20px;
 }
 
+.feedback {
+    padding-top: 5px;
+}
+
 .footer-button {
     display: block;
     margin-bottom: 10px;
@@ -750,6 +794,13 @@ footer {
     margin-top: 20px; 
 }
 
+.kolding1 {
+    padding-top: 5px;
+}
+
+.trip {
+    padding-top: 10px;
+}
 
 @media (max-width:500px) {
     header {
@@ -784,11 +835,7 @@ footer {
         padding-top: 20px;
     }
 
-    #about-us p,
-    #Mission p {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+    
 
     .about-us-images,
     .flatpickr-calendar,
@@ -833,11 +880,7 @@ footer {
         padding-top: 20px;
     }
 
-    #about-us p,
-    #Mission p {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+   
 
     .about-us-images,
     .flatpickr-calendar  {
@@ -868,7 +911,26 @@ footer {
 
 }
 
-@media (min-width: 1501px) {
+.navsocial {
+    text-align: center;
+    padding-bottom: 10px;
+}
+.socialmedia {
+    font-size: 50px;
+    column-gap: 20px;
+    display: inline-block;
+    color: #000;
+   justify-content: center;
+}
 
+@media (max-width: 1501px) {
+    .missionh2
+    {
+        display: none;
+    }
 
+    .pmission{
+        text-wrap:wrap ;
+        display: none;
+    }
 }
